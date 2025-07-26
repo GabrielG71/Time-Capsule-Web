@@ -4,7 +4,7 @@
     >
         <div class="flex items-center gap-3">
             <span>📧</span>
-            <span>Time Capsule Web</span>
+            <span>Time Capsule Web - Y2K</span>
         </div>
 
         <div class="flex items-center gap-2 flex-wrap justify-end text-[8px]">
