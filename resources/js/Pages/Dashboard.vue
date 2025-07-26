@@ -4,20 +4,20 @@
     >
         <Header :user="$page.props.auth.user" />
 
-        <main
-            class="flex flex-col items-center justify-center text-center py-20"
-        >
-            <h1 class="text-purple-800 text-[12px] mb-6">
-                This is your Capsule Machine 💫
-            </h1>
+        <main class="flex-grow flex items-center justify-center px-4">
+            <div class="text-center">
+                <h1 class="text-purple-800 text-[12px] mb-8">
+                    This is your Capsule Machine 💫
+                </h1>
 
-            <div class="space-y-4">
-                <button class="retro-btn" @click="addToCapsule">
-                    Add to Capsule 📦
-                </button>
-                <button class="retro-btn" @click="viewCapsules">
-                    My Capsules ⏳
-                </button>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button class="retro-btn" @click="addToCapsule">
+                        Add to Capsule 📦
+                    </button>
+                    <button class="retro-btn" @click="viewCapsules">
+                        My Capsules ⏳
+                    </button>
+                </div>
             </div>
         </main>
 
