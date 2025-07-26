@@ -2,7 +2,7 @@
     <div
         class="min-h-screen bg-gradient-to-br from-pink-300 via-cyan-200 via-yellow-100 to-green-200 animate-[holographic_8s_ease_infinite] font-press2p overflow-x-hidden relative"
     >
-        <Header />
+        <Header :user="user" />
 
         <main
             class="window mx-auto mt-10 max-w-4xl shadow-xl border-[3px] border-gray-400 bg-gradient-to-br from-indigo-100 to-purple-100"
@@ -42,6 +42,10 @@
 <script setup>
 import Header from "../Components/Header.vue";
 import Footer from "../Components/Footer.vue";
+
+defineProps({
+    user: Object,
+});
 </script>
 
 <style scoped>
