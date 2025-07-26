@@ -10,24 +10,31 @@
         <div class="flex items-center gap-2 flex-wrap justify-end text-[8px]">
             <template v-if="user">
                 <span class="text-pink-300">Welcome, {{ user.name }}</span>
-                <button class="retro-btn py-[2px] px-2" @click="goTo('home')">
+                <button class="retro-btn py-[2px] px-2" @click="goTo('/')">
                     Home
+                </button>
+                <button
+                    class="retro-btn py-[2px] px-2"
+                    @click="goTo('/dashboard')"
+                >
+                    Menu
                 </button>
                 <button class="retro-btn py-[2px] px-2" @click="logout">
                     Logout
                 </button>
             </template>
+
             <template v-else>
-                <button class="retro-btn py-[2px] px-2" @click="goTo('home')">
+                <button class="retro-btn py-[2px] px-2" @click="goTo('/')">
                     Home
                 </button>
                 <button
                     class="retro-btn py-[2px] px-2"
-                    @click="goTo('register')"
+                    @click="goTo('/register')"
                 >
                     Register
                 </button>
-                <button class="retro-btn py-[2px] px-2" @click="goTo('login')">
+                <button class="retro-btn py-[2px] px-2" @click="goTo('/login')">
                     Login
                 </button>
             </template>
@@ -56,7 +63,6 @@
 <script setup>
 import { router } from "@inertiajs/vue3";
 
-// Definir props corretamente
 const props = defineProps({
     user: {
         type: Object,
@@ -64,8 +70,11 @@ const props = defineProps({
     },
 });
 
-const goTo = (route) => {
-    router.visit(`/${route}`);
+const goTo = (path) => {
+    if (!path.startsWith("/")) {
+        path = `/${path}`;
+    }
+    router.visit(path);
 };
 
 const logout = () => {

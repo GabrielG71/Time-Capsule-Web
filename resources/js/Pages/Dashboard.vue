@@ -1,30 +1,64 @@
+<template>
+    <div
+        class="min-h-screen flex flex-col justify-between bg-gradient-to-br from-pink-300 via-yellow-100 to-green-200 font-press2p"
+    >
+        <Header :user="$page.props.auth.user" />
+
+        <main
+            class="flex flex-col items-center justify-center text-center py-20"
+        >
+            <h1 class="text-purple-800 text-[12px] mb-6">
+                This is your Capsule Machine 💫
+            </h1>
+
+            <div class="space-y-4">
+                <button class="retro-btn" @click="addToCapsule">
+                    Add to Capsule 📦
+                </button>
+                <button class="retro-btn" @click="viewCapsules">
+                    My Capsules ⏳
+                </button>
+            </div>
+        </main>
+
+        <Footer />
+    </div>
+</template>
+
 <script setup>
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import { Head } from '@inertiajs/vue3';
+import { router } from "@inertiajs/vue3";
+import Header from "../Components/Header.vue";
+import Footer from "../Components/Footer.vue";
+
+const addToCapsule = () => router.visit("/capsules/create");
+const viewCapsules = () => router.visit("/capsules");
 </script>
 
-<template>
-    <Head title="Dashboard" />
+<style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-    <AuthenticatedLayout>
-        <template #header>
-            <h2
-                class="text-xl font-semibold leading-tight text-gray-800"
-            >
-                Dashboard
-            </h2>
-        </template>
+.font-press2p {
+    font-family: "Press Start 2P", cursive;
+}
 
-        <div class="py-12">
-            <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div
-                    class="overflow-hidden bg-white shadow-sm sm:rounded-lg"
-                >
-                    <div class="p-6 text-gray-900">
-                        You're logged in!
-                    </div>
-                </div>
-            </div>
-        </div>
-    </AuthenticatedLayout>
-</template>
+.retro-btn {
+    background: linear-gradient(145deg, #f0f8ff, #e6e6fa);
+    border: 2px outset #c0c0c0;
+    padding: 10px 20px;
+    font-size: 8px;
+    color: #000080;
+    cursor: pointer;
+    transition: 0.1s;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.retro-btn:hover {
+    background: linear-gradient(145deg, #e6e6fa, #dda0dd);
+    transform: translateY(-1px);
+}
+
+.retro-btn:active {
+    border: 2px inset #c0c0c0;
+    transform: translateY(1px);
+}
+</style>
