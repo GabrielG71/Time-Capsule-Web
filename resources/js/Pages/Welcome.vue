@@ -1,36 +1,40 @@
 <template>
     <div
-        class="min-h-screen bg-gradient-to-br from-pink-300 via-cyan-200 via-yellow-100 to-green-200 animate-[holographic_8s_ease_infinite] font-press2p overflow-x-hidden relative"
+        class="min-h-screen flex flex-col justify-between bg-gradient-to-br from-pink-300 via-cyan-200 via-yellow-100 to-green-200 animate-[holographic_8s_ease_infinite] font-press2p overflow-x-hidden"
     >
         <Header :user="user" />
 
-        <main
-            class="window mx-auto mt-10 max-w-4xl shadow-xl border-[3px] border-gray-400 bg-gradient-to-br from-indigo-100 to-purple-100"
-        >
-            <h1
-                class="main-title text-center text-[18px] text-purple-800 mb-4 animate-[pulse_2s_ease-in-out_infinite_alternate]"
-            >
-                Time Capsule Web
-            </h1>
-
+        <main class="flex-grow flex items-center justify-center px-4">
             <div
-                class="dialog-box bg-gradient-to-br from-blue-50 to-purple-100 border-2 border-gray-300 p-4 text-[8px] text-blue-900 max-w-xl mx-auto shadow-inner"
+                class="window w-full max-w-4xl shadow-xl border-[3px] border-gray-400 bg-gradient-to-br from-indigo-100 to-purple-100 p-6"
             >
-                <div
-                    class="dialog-header underline text-[12px] text-indigo-900 mb-2"
+                <h1
+                    class="main-title text-center text-[18px] text-purple-800 mb-6 animate-[pulse_2s_ease-in-out_infinite_alternate]"
                 >
-                    Welcome to the Future! ✨
-                </div>
-                <div class="dialog-text mb-4 leading-[14px]">
-                    Greetings, time traveler! You've entered the most radical
-                    digital time capsule experience on the World Wide Web.
-                    Create your own time capsule, send messages to the future,
-                    or discover treasures from the past.
-                </div>
-                <div class="flex justify-center flex-wrap gap-3">
-                    <button class="retro-btn">Create Capsule</button>
-                    <button class="retro-btn">View Capsules</button>
-                    <button class="retro-btn">Time Travel</button>
+                    Time Capsule Web
+                </h1>
+
+                <div
+                    class="dialog-box bg-gradient-to-br from-blue-50 to-purple-100 border-2 border-gray-300 p-4 text-[8px] text-blue-900 max-w-xl mx-auto shadow-inner"
+                >
+                    <div
+                        class="dialog-header underline text-[12px] text-indigo-900 mb-3 text-center"
+                    >
+                        Welcome to the Future! ✨
+                    </div>
+                    <div class="dialog-text mb-6 leading-[14px] text-center">
+                        Yo, cyber-explorer! 🚀 You’ve just jacked into the most
+                        tubular time capsule zone on the World Wide Web! Whether
+                        you’re cruisin’ in from the future to peep your old
+                        vibes, or droppin’ a message to your future self, this
+                        is your digital time vault. Slam in your thoughts, set
+                        the date, and boom 💾 — it’ll hit your inbox like a
+                        blast from the past. Time-travel just went full 2000!
+                    </div>
+                    <div class="flex justify-center flex-wrap gap-3">
+                        <button class="retro-btn">Create Capsule</button>
+                        <button class="retro-btn">View Capsules</button>
+                    </div>
                 </div>
             </div>
         </main>
