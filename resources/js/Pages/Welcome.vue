@@ -33,10 +33,7 @@
                     </div>
                     <div class="flex justify-center flex-wrap gap-3">
                         <button class="retro-btn" @click="addToCapsule">
-                            Create Capsule
-                        </button>
-                        <button class="retro-btn" @click="viewCapsules">
-                            View Capsules
+                            Get Started!
                         </button>
                     </div>
                 </div>
@@ -53,7 +50,6 @@ import Header from "../Components/Header.vue";
 import Footer from "../Components/Footer.vue";
 
 const addToCapsule = () => router.visit("/capsules/create");
-const viewCapsules = () => router.visit("/capsules");
 
 defineProps({
     user: Object,
