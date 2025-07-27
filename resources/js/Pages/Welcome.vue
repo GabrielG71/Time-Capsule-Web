@@ -32,8 +32,12 @@
                         blast from the past. Time-travel just went full 2000!
                     </div>
                     <div class="flex justify-center flex-wrap gap-3">
-                        <button class="retro-btn">Create Capsule</button>
-                        <button class="retro-btn">View Capsules</button>
+                        <button class="retro-btn" @click="addToCapsule">
+                            Create Capsule
+                        </button>
+                        <button class="retro-btn" @click="viewCapsules">
+                            View Capsules
+                        </button>
                     </div>
                 </div>
             </div>
@@ -44,8 +48,12 @@
 </template>
 
 <script setup>
+import { router } from "@inertiajs/vue3";
 import Header from "../Components/Header.vue";
 import Footer from "../Components/Footer.vue";
+
+const addToCapsule = () => router.visit("/capsules/create");
+const viewCapsules = () => router.visit("/capsules");
 
 defineProps({
     user: Object,
