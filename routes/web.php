@@ -30,4 +30,6 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/capsules/create', [CapsuleController::class, 'create'])->name('capsules.create');
 
+Route::get('/capsules', [CapsuleController::class, 'index'])->name('capsules.index');
+
 require __DIR__.'/auth.php';

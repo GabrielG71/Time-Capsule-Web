@@ -8,19 +8,16 @@
             <div
                 class="w-full max-w-md bg-white bg-opacity-90 border-2 border-gray-400 rounded-xl p-6 shadow-lg text-center"
             >
-                <!-- Botão de Voltar -->
                 <div class="text-left mb-4">
                     <button class="retro-btn" @click="goBack">
                         ⬅️ Back to Menu
                     </button>
                 </div>
 
-                <!-- Título -->
                 <h1 class="text-purple-800 text-[10px] mb-6">
                     Create a New Capsule 🧪
                 </h1>
 
-                <!-- Formulário -->
                 <form
                     @submit.prevent="submitForm"
                     enctype="multipart/form-data"
