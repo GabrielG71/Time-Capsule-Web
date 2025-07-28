@@ -24,21 +24,13 @@
                     <h2 class="text-purple-700 mb-2 font-bold">
                         {{ capsule.title }}
                     </h2>
-                    <p class="mb-2">{{ capsule.content }}</p>
 
-                    <div class="text-gray-600">
+                    <div class="text-gray-600 mb-2">
                         📅 Send Date: {{ capsule.send_date }}
                     </div>
 
-                    <div v-if="capsule.file_path" class="mt-2">
-                        📎
-                        <a
-                            :href="`/storage/${capsule.file_path}`"
-                            target="_blank"
-                            class="text-blue-700 underline"
-                        >
-                            View Attachment
-                        </a>
+                    <div class="text-gray-500 text-[7px] italic">
+                        🔒 Content will be revealed on send date
                     </div>
                 </div>
 
