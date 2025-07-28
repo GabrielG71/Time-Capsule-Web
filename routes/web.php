@@ -29,6 +29,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/capsules/create', [CapsuleController::class, 'create'])->name('capsules.create');
     Route::get('/capsules', [CapsuleController::class, 'index'])->name('capsules.index');
+    Route::post('/capsules', [CapsuleController::class, 'store'])->name('capsules.store'); // ← Esta linha estava faltando!
 });
 
 require __DIR__.'/auth.php';
