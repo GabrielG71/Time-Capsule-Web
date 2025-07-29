@@ -1,4 +1,4 @@
-# 🪐 TIME CAPSULE WEB - Y2K  
+# 🕰️ TIME CAPSULE WEB - Y2K  
 **`A nostalgic digital portal to write and store future messages`**
 
 A simple Laravel + Vue.js project inspired by the Y2K aesthetic, where users can create digital time capsules to be opened on a future date.
